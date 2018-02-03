@@ -12,11 +12,27 @@ Here are the data for the project:
 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
+You should create one R script called run_analysis.R that does the following.
+
+1. Merges the training and the test sets to create one data set.
+2. Extracts only the measurements on the mean and standard deviation for each measurement.
+3. Uses descriptive activity names to name the activities in the data set
+4. Appropriately labels the data set with descriptive variable names.
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+
+Files Included in the Repository
+----------------
+
+1. **run_analysis.R** - is the code itself for the data cleaning process.
+2. **CodeBook.md** - lists the variables/features as well as the step-by-step procedure of data cleaning.
+3. **tidy.txt** - The result of the enumerated data cleaning steps is stored in the tidy.txt file in this repository.
+
 Step-by-step Procedure of Data Cleaning (From Cluttered Data to Tidy Data)
 --------------
 
 1. Checks the directory harus data in the working directory. If the directory is not found, create it (lines 4 - 7).
-2. download the zip file located at the fileUrl mentioned above (lines 9 - 10)
+2. download the zip file located at the fileUrl mentioned on the readme (lines 9 - 10)
 3. Unzip dataSet to /harus_data directory (Line 13)
 4. Read the training tables for x, y and subject (lines 16 - 19)
 5. Read the testing tables for x, y and subject (lines 21 - 23)
@@ -34,5 +50,3 @@ Step-by-step Procedure of Data Cleaning (From Cluttered Data to Tidy Data)
 17. Split the data into subset of subject, activity and subset_activity_names and return the mean summary statistic for each aggregation (lines 73 - 74)
 18. Set the activity type as factor to have a definitive name for that activity (line 77)
 19. Save the data into tidy.txt (line 80)
-
-The result of the previously enumerated data cleaning process is stored in the tidy.txt file in this repository.

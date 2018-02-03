@@ -129,12 +129,28 @@ $(document).ready(function () {
 <p><a href="http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones" class="uri">http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones</a></p>
 <p>Here are the data for the project:</p>
 <p><a href="https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip">https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip</a></p>
+<p>You should create one R script called run_analysis.R that does the following.</p>
+<ol style="list-style-type: decimal">
+<li>Merges the training and the test sets to create one data set.</li>
+<li>Extracts only the measurements on the mean and standard deviation for each measurement.</li>
+<li>Uses descriptive activity names to name the activities in the data set</li>
+<li>Appropriately labels the data set with descriptive variable names.</li>
+<li>From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.</li>
+</ol>
+</div>
+<div id="files-included-in-the-repository" class="section level2">
+<h2>Files Included in the Repository</h2>
+<ol style="list-style-type: decimal">
+<li><strong>run_analysis.R</strong> - is the code itself for the data cleaning process.</li>
+<li><strong>CodeBook.md</strong> - lists the variables/features as well as the step-by-step procedure of data cleaning.</li>
+<li><strong>tidy.txt</strong> - The result of the enumerated data cleaning steps is stored in the tidy.txt file in this repository.</li>
+</ol>
 </div>
 <div id="step-by-step-procedure-of-data-cleaning-from-cluttered-data-to-tidy-data" class="section level2">
 <h2>Step-by-step Procedure of Data Cleaning (From Cluttered Data to Tidy Data)</h2>
 <ol style="list-style-type: decimal">
 <li>Checks the directory harus data in the working directory. If the directory is not found, create it (lines 4 - 7).</li>
-<li>download the zip file located at the fileUrl mentioned above (lines 9 - 10)</li>
+<li>download the zip file located at the fileUrl mentioned on the readme (lines 9 - 10)</li>
 <li>Unzip dataSet to /harus_data directory (Line 13)</li>
 <li>Read the training tables for x, y and subject (lines 16 - 19)</li>
 <li>Read the testing tables for x, y and subject (lines 21 - 23)</li>
@@ -153,7 +169,6 @@ $(document).ready(function () {
 <li>Set the activity type as factor to have a definitive name for that activity (line 77)</li>
 <li>Save the data into tidy.txt (line 80)</li>
 </ol>
-<p>The result of the previously enumerated data cleaning process is stored in the tidy.txt file in this repository.</p>
 </div>
 </div>
 
